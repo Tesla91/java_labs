@@ -1,4 +1,4 @@
-package Part_01;
+package part_01;
 
 /**
  * Part 1 Exercise 11:
@@ -16,7 +16,18 @@ public class Exercise_11 {
 
     public static void main(String[] strings) {
 
-        //...
+        int day = 86400;
+        int born = day / 6;
+        int dies = day / -12;
+        int immigrates = day / 40;
+        int peopleADay = born + dies + immigrates;
+        int peopleAYear = peopleADay * 365;
+        int peopleInThreeYears = peopleAYear * 3;
+        int population = 380123456;
+
+        System.out.println(peopleInThreeYears + population);
+
+
 
 
     }

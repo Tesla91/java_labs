@@ -1,4 +1,4 @@
-package Part_01;
+package part_01;
 
 /**
  * Part 1 Exercise 2:
@@ -8,9 +8,11 @@ package Part_01;
 public class Exercise_02 {
 
     public static void main(String[] args) {
+        int count;
 
-//        for (...) {
-//            System.out.println(...);
-//        }
+        for (count = 0; count < 5; count++) {
+            System.out.println("Hello World!");
+
+        }
     }
 }

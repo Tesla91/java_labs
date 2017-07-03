@@ -16,7 +16,7 @@ public class Exercise_04 {
 
          System.out.println("a," + "a*2," + "a*4");
          for (int i = 1; i <= 4; i++) {
-         //    System.out.println(...);
+             System.out.println(i + " " + i*2 + " " + i*4 + " ");
          }
      }
 }
