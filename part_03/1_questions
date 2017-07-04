@@ -3,40 +3,67 @@ Answer the following questions
 
 
 1) What is an instance variable?
+    Data members of a class
 
 2) How do you create a new object?
+    <ClassName> <ObjectName> = new <ClassName>();
 
 3) After creating a new object, how do you set that objects instance variables?
+    The instance variables are set when you create as new object. To access the variables you use the dot operator.
 
 4) What is a reference variable? Why do you need to be careful with reference variables?
+    A reference variables ais used to refer to an object. You need to be careful with them
+    because you could make two objects refer to the same variables.
 
 5) How many methods can you have in a class?
+    I could not find the answer to this in the book.
+    Though after a google search I learned that there is a limit of 65535 methods to a class. Source: https://goo.gl/Ejw49m
 
 6) How do you exit a method at any point?
+    return;
 
 7) What is the method signature required to return an "int" from a method?
+    <InstanceVariable> = <ObjectName>.<MethodName>();
 
 8) Assuming "int num = 10", what is the syntax to return "num" from a method?
+    return num;
 
 9) How do you pass a parameter to a method?
+    By calling the method.
 
 10) What is the method signature for a method named sum() that takes two int parameters
     and returns their sum as in int?
+    int sum(int a, int b){
+    return a + b;
+    }
 
 11) What is a constructor?
+    A constructor initializes an object when it is created. They have no explicit return type.
 
 12) How does Java treat a class without a constructor?
+    it automatically provides a default constructor.
 
 13) What would the constructor for "public class Animal" look like?
+    Animal(){
+    }
 
 14) What is the effect of passing parameters to a constructor?
+    Initializes's the instance variable.
 
 15) When should you pass parameters to a constructor?
+    To initialize the instance variable.
 
 16) What does the finalize() method do?
+    Ensures that an object terminates cleanly.
 
 17) What does the "this" keyword do?
+    It is used to "uncover" the instance variables.
 
 18) When should you use the "this" keyword?
+    When you want to differentiate between a parameter and a local variable with the same name.
 
 19) Write an example of the "this" keyword in action.
+    Pwr(int a, int b) {
+        this.a = a;
+        this.b = b;
+        }
