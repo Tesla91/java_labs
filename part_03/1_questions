@@ -23,7 +23,7 @@ Answer the following questions
     return;
 
 7) What is the method signature required to return an "int" from a method?
-    <InstanceVariable> = <ObjectName>.<MethodName>();
+    public static int <method>(<int 1, int 2>){
 
 8) Assuming "int num = 10", what is the syntax to return "num" from a method?
     return num;
