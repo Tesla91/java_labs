@@ -16,18 +16,32 @@ class Exercise_06 {
         long totalMilliseconds = System.currentTimeMillis();
 
         // Get total seconds since midnight, 1/1/1970
+        long totalSeconds = totalMilliseconds/1000;
 
         // Get the current second within the minute within the hour
+        long currentSecond = totalSeconds % 60;
 
         // Get total minutes
+        long totalMinutes = totalSeconds / 60;
 
         // Get the current minute in the hour
+        long currentMinute = totalMinutes % 60;
 
         // Get the total hours
+        long totalHours = totalMinutes / 60;
 
         // Get the current hour
+        long currentHour = (totalHours + timeZoneChange) % 24;
 
         // Display results using a 12 hour clock, include AM or PM
+        String amPm = "";
 
+        if (currentHour < 12) {
+            amPm = "AM";
+        } else if (currentHour > 12) {
+            currentHour = currentHour - 12;
+            amPm = " PM";
+        }
+        System.out.println(currentHour + ":" + currentMinute + ":" + currentSecond + amPm);
     }
 }
