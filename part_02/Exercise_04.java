@@ -16,7 +16,6 @@ public class Exercise_04 {
     public static void main(String[] args)
        throws java.io.IOException {
 
-
             Scanner input = new Scanner(System.in);
 
             System.out.println("Enter a number in pounds: ");

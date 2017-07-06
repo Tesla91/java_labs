@@ -11,5 +11,21 @@ import java.util.Scanner;
  *
  */
 public class Exercise_08 {
+    public static void main(String[] args) {
 
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter a number between  0 and 1,000,000,000: ");
+        int userNumber = input.nextInt();
+
+        int i = 0;
+
+        while (i < 1000000000) {
+            if (i == userNumber) {
+                System.out.println(i);
+                break;
+            }
+            i++;
+        }
+    }
 }

@@ -12,5 +12,18 @@ import java.util.Scanner;
  *
  */
 public class Exercise_07 {
+    public static void main (String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter a number of minutes between  1 and 1,000,000,000: ");
+        int userNumber = input.nextInt();
+
+        int numberYears = userNumber/365;
+
+        int numberDays = userNumber%365;
+
+        System.out.println(numberYears+ " years and "+ numberDays+ " days");
+    }
 
 }

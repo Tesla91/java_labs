@@ -22,15 +22,20 @@ public class Exercise_11 {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Enter investment amount: ");
-        //...
+        int investAmount = input.nextInt();
 
         System.out.print("Enter annual interest rate in percentage: ");
-        //...
+        double intRate = input.nextDouble();
 
         System.out.print("Enter number of years: ");
-        //...
-        //...
-        //...
+        int years = input.nextInt();
+
+        double investValue = investAmount;
+        for (int i =1; i <= years; i++) {
+            investValue =investValue + investValue*intRate/100;
+        }
+
+        System.out.println(investValue);
     }
 }
 

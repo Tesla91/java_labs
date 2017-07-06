@@ -16,3 +16,21 @@ import java.util.Scanner;
  *
  */
 
+public class Exercise_12 {
+    public static void main (String [] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter number of miles you will be driving: ");
+        int miles = input.nextInt();
+
+        System.out.print("Enter the MPG of your car: ");
+        double mpg = input.nextDouble();
+
+        System.out.print("Enter the price per gallon of gas: ");
+        int price = input.nextInt();
+
+        double cost = miles / mpg * price;
+        double roundCost = Math.round(cost * 100.0) / 100.0;
+        System.out.println("The cost of your journey will be $"+ roundCost);
+    }
+}

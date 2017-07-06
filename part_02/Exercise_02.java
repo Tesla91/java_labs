@@ -21,6 +21,7 @@ public class Exercise_02 {
 
         System.out.print("Enter radius: ");
         double radius = input.nextDouble();
+
         System.out.print("Enter length: ");
         double length = input.nextDouble();
 

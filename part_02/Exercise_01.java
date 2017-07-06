@@ -26,5 +26,6 @@ public class Exercise_01 {
         System.out.print(C + " degrees celsius = ");
         System.out.println((9*(C/5) +32) + " degrees fahrenheit");
 
+
     }
 }
