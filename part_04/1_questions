@@ -3,48 +3,137 @@ Answer the following questions:
 
 1) What is an array?
 
-2) What the code required to create (instantiate) a String array with size 10 named "cats"?
+An array is a collection of variables of the same type, referred to by a common name.
+
+2) What is the code required to create (instantiate) a String array with size 10 named "cats"?
+
+String cats[] = new String[10];
 
 3) What is a multidimensional array?
 
+A multidimensional array is an array with 2 or more dimensions
+
 4) What is the code required to create (instantiate) a 2-dimensional int array that is 6 high and 6 wide named "scores"?
+
+int scores[][] = new int[6][6];
 
 5) Using code, how do you retrieve a String that is the 10th item in a traditional array named dogs?
 
+dogs[9]
+
 6) What is an ArrayIndexOutOfBoundsException?
+
+It is a runtime error to overrun or underrun the end of an array.
 
 7) Using one line of code, demonstrate how to retrieve the second to the last item from a int array.
 
+sample[a.length -1]
+
 8) What is the maximum allowable size of an array in Java?
+
+2147483647
 
 9) What is a bubble sort?
 
+It is a way to sort data.
+
 10) How does a bubble sort work?
+
+It compares the first two item to each other and if the first one is greater that the second one then it swaps them.
+Then it compares the next two and does the same thing. It continues doing this until the whole data set is sorted.
 
 11) When might you use an irregular array? What is a good example of an irregular array?
 
+When your second array dimension need to have different amounts of memory.
+
+int days[][] = new int[7][]
+days[0] = new int[3]
+days[1] = new int[3]
+days[2] = new int[3]
+days[3] = new int[3]
+days[4] = new int[3]
+days[5] = new int[6]
+days[6] = new int[6]
+
 12) Demonstrate how to iterate through an array, printing each value, using a for loop.
+class Demo{
+     public static void main(String[] args) {
+
+            int dem[] = new int[5];
+            int i;
+
+
+            for(i =0; i < 5; i++)
+                dem[i] =i;
+
+            for(i =0; i < 5; i++)
+                System.out.println(dem[i]);
+     }
+}
 
 13) Demonstrate how to iterate through an array, printing each value, using a while loop.
+class Demo{
+    public static void main(String[] args) {
+
+        int dem[] = new int[5];
+        int i;
+        i=0;
+
+        while( i < 5) {
+            dem[i] =i;
+            System.out.println(dem[i]);
+            i++;
+
+        }
+    }
+}
 
 14) What is a queue?
 
+A queue is a list in which elements can be accessed in first-in first-out order.
+
 15) What are the two primary operations that a queue performs?
+
+Putting an item into the queue and getting an item from the queue
 
 16) What is a stack?
 
+A stack is a list in which elements can be accessed in first-in last-out order.
+
 17) What differentiates stacks and queues?
+
+a Queue is fifo and a stack is filo.
 
 18) When would you use an enhanced for loop?
 
+When you need to examine each element within an array from start to finish.
+
 19) What is "The Collections Framework"? What classes does it include?
+
+A set of classes that implement various data structures, such as, lists, vectors, sets, and maps.
 
 20) How do you iterate over a two-dimensional array? Demonstrate using psuedo code.
 
+for (int x[] : nums) {
+    for (int y : x) {
+    }
+}
+
 21) What is a String?
+
+Strings are objects.
 
 22) What are a few common methods for operating on Strings?
 
+String samp = new String("Sample");
+String samp2 = "Sample2";
+
 23) What does "Strings are immutable" mean?
 
+That the characters sequence that makes up the string cant be altered.
+
 24) Using the CLI, how do you invoke a Java application and provide two parameters to the main method?
+
+javac TestProblem.java
+
+java TestProblem x y
