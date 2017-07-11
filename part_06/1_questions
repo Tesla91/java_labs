@@ -1,23 +1,33 @@
 
 1) What is Java inheritance?
 
+
 2) How does inheritance work?
+
 
 3) What are some advantages that inheritance provides?
 
+
 4) What does the "super" keyword do?
+
 
 5) In what order are constructors called when there are multiple subclasses?
 
+
 6) What does it mean when a method is overridden?
+
 
 7) How do overridden methods support polymorphism?
 
+
 8) What is the difference between an overloaded method and an overridden method?
+
 
 9) What is dynamic method dispatch?
 
+
 10) What does the "final" keyword do?
+
 
 11) Are classes in Java are a subclass of what super class?
 
