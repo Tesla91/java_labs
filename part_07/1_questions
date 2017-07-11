@@ -1,9 +1,12 @@
 
 1) What is a Java package?
+Packages are groups of related classes.
 
 2) What is the CLASSPATH variable all about?
 
+
 3) What does the package structure mirror?
+
 
 4 How do packages affect access to Java classes?
 

@@ -2,61 +2,103 @@
 Answer the following:
 
 1) What are the access control modifiers (acm) provided in Java?
+    Public, Private and Protected
 
 2) Briefly explain each acm and how they differentiate from each other?
+    A public member can be freely accessed by code outside of its class.
+    A private member can only be accessed by other members defined by its class.
+    The protected member is only used when inheritance is involved.
 
 3) Why do we use acm's?
+    To specify how a member can be used.
 
 4) What is the risk of not using acm's?
+    To prevent improper use of members.
 
 5) Write a method signature that receives an object of type "Car" as a parameter.
+    Vehicle.meth(Car)
 
 6) Write a method signature that returns an object of type "Car".
+    String meth(Car){
+    return Car;
+    }
 
 7) What is a very important consideration to keep in mind when passing objects (hint: by reference) from one
 method to another?
+    Changes to the object inside the method do affect the object used as an argument.
 
 8) What is method overloading?
+    Declaring different versions of the method.
 
 9) Why is method overloading useful? (Hint: as compared to the implementation in the C language.)
+    It is useful because you dont have to create new methods for every type of return type you want to use.
 
 10) How do you overload a method? What signifies that a method is being overloaded?
+    By calling the method with different parameters. The return type can differ as well.
+    Difference in parameters signifies that a method is being overloaded.
 
 11) Below, by writing just the method signature, demonstrate overloading a method 3 times.
 
+void sample(){}
+int sample(int a, int b){}
+double sample(double x, double y){}
+
 12) How do you overload a constructor? What signifies that a constructor is being overloaded?
+    By constructing objects in different ways.
+    Difference in parameters signifies that a constructor is being overloaded.
 
 13) Why do we overload constructors?
+    So objects can initialize other objects.
 
 14) Below, by writing just the constructor signature, demonstrate overloading a constructor 3 times.
 
+Sample(){}
+Sample(int a){}
+Sample(double x){}
+
 15) What is recursion?
+    Recursion is the process of defining something in terms of itself.
 
 16) What important considerations must you keep in mind when using recursion?
+    Recursion takes up a lot of memory and is not usually the best option.
 
 17) How do you make a method recursive?
+    When the method calls itself.
 
 18) How do you escape a recursive method?
+    return a base case
 
 19) Explain what "static" is all about?
+    When a member is declared static, it can be accessed before any objects of its class are created,
+    and without reference to any object.
 
 20) When should you use "static"?
+    When you want access to a member before an object is created.
 
 21) What differentiates static variables from instance variables?
+    Static variables are global variables. Instance variables can only be accessed within their methods.
 
 22) What is a the quicksort? Briefly describe how the quicksort works.
+    It is a way to sort data. You partition the data into teo sections and put all the items grater than the partition
+    on one side and all of the items less than the partition on the other. Then you do that again with each sid until
+    all of the data is sorted.
 
 23) What is a nested, or inner, class?
+    A class within a class.
 
 24) What is the scope of a nested class?
+    The scope of a nested class is bounded by its outer class.
 
 25) What is a variable-arity method?
+    A method that takes a variable number of arguments.
 
 26) What makes a variable-arity method unique? When should you use it?
+    The parameter list for a varargs method is not fixed, but rather variable in length.
 
 27) What is the shorthand name for variable-arity?
+    varargs
 
-28) Why important considerations must you keep in mind when using variable-arity methods? (hint: ambiguity)
-
+28) What important considerations must you keep in mind when using variable-arity methods? (hint: ambiguity)
+    It is possible to make an ambiguous call to an overloaded varargs method.
 
 
