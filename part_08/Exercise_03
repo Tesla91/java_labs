@@ -25,13 +25,51 @@ Using MySQLWorkbench do the following
 
 5) Write the SQL queries to accomplish the following: (write each of your queries below for review)
     - select all records from clients
+    select * from clients;
+
     - select all records from clients where car make = "Toyota"
+    select * from clients where make = 'Toyota';
+
     - use a join to select all makes and models that a dealer has sold
+    select makes, models
+    from cars ca
+    inner join clients cl
+    on cl.carID = ca.car_ID
+    where dealerID = 1;
+
     - use a left join to select the first and last name of everyone who has bought a red car
+    select
+    u.firstName,
+    u.lastName,
+    ca.color
+    from cars ca
+    left join clients cl
+    on ca.carsID = cl.carsID
+    left join users u
+    on u.userID = cl.userID
+    where ca.color = 'red';
+
     - use an insert statement to create a new record in each table
+    insert into users (first_name, last_name)
+    values ('Debora', 'Trillia');
+    insert into cars (make, model, color, year
+    values ('Toyota', 'Camry', 'Red', '1995');
+
     - create a new table named "test" with at least two fields
+    create table test (
+    ID tinyint unsigned not null auto_increment,
+    testName varchar(10) not null,
+    Date datetime not null,
+    PRIMARY KEY (ID)
+    )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
     - use sql to drop the the "test" table
+    drop database if exists Test;
     - use sql to update a record in the "cars" table
+    update cars
+    set model = 'GTI'
+    where carID = 1;
 
 6) Using MySQLWorkbench, export the the "clients", "users" and "cars" schema with all objects and data into a
 self-contained sql file. - check the exported file into git

@@ -1,3 +1,4 @@
 
 Write a class with at least one method that uses a try/catch statement. Make sure the catch block is executed, ie
 generate an error an catch it in the catch block.
+

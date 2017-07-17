@@ -5,10 +5,23 @@ package part_07;
  */
 
 
-class Vehicles implements Controller.Series{
+class Vehicles implements Series{
     private int length;
     private int width;
     private boolean hasWheels;
+
+    @Override
+    public void reset(){
+        System.out.println("reset");
+    }
+    @Override
+    public void start(){
+        System.out.println("start");
+    }
+    @Override
+    public void end(){
+        System.out.println("end");
+    }
 
     public Vehicles() {
     }
@@ -49,9 +62,10 @@ class Vehicles implements Controller.Series{
 
     public boolean isCar(boolean hasWheels) {
         if (hasWheels) {
+            return true;
 
         }
-        return true;
+        return false;
     }
 }
 
@@ -74,7 +88,8 @@ class Cars extends Vehicles {
     }
     public boolean isConvertible(boolean roof) {
         if (roof) {
-        } return true;
+            return true;
+        } return false;
     }
 }
 
@@ -130,14 +145,13 @@ public class Controller{
     public static void main(String[] args) {
         Ferrari ferr = new Ferrari(100,20,true,6000,"red",true,
                 "ferrari", "2017",500,200);
+        Vehicles veh = new Vehicles();
+        veh.reset();
+        veh.start();
+        veh.end();
 
     }
-    public interface Series{
-        void reset();
-        void start();
-        void end();
 
-    }
 }
 
 

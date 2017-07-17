@@ -1,29 +1,102 @@
 
 1) Describe the exception hierarchy.
-This is not a test
+All exceptions are represented by class. All exception classes are derived from a class called Throwable.
+There are tow direct subclasses of Throwable: Error class which is errors that occur in the JVM and Exception
+class which is program errors like divide by zero and array out of bounds.
+
 2) What is a try/catch statement?
+A Try/Catch statement is a try block followed by one or more catch blocks. When an exception is thrown in a try block,
+the catch statement that handles the exception processes it.
 
 3) Why do we use try/catch statements?
+To prevent programs from crashing when an error is found.
 
 4) Write a full example of a try/catch/finally statement that catches two distinct exceptions
+class Sample{
+    public static void main(String[] args) {
+        int nums [] = {8, 3, 40};
+        int nums2 [] = {4, 0, 2};
+
+        for(int i = 0; i < nums.length; i++){
+
+            try{
+                System.out.println(nums[i] / nums2[i]);
+                nums[5] = 5;
+            }
+            catch (ArrayIndexOutOfBoundsException exc){
+                System.out.println("Index out of bounds");
+            }
+            catch (ArithmeticException exc){
+                System.out.println("Cant divide by zero");
+            }
+            finally{
+                System.out.println("leaving try");
+            }
+        }
+    }
+}
 
 5) What does it mean to "throw" an exception? How does it work?
+Throws is a mechanism to throw the exception to the calling method. This is generally used to throw the exception
+to a level where it can be handled.
 
 6) What happens if your application encounters an exception and you don't catch it or throw it?
+The application will crash.
 
 7) When catching exception in an inheritance hierarchy, should you catch the subclass exception or the
 superclass exception first? Why?
+The subclass exception because the superclass exception will catch all subclasses too and unreachable code is created.
+
 
 8) Write a nested try/catch statement.
+class Sample2 {
+
+    public static void main(String[] args) {
+        int nums [] = {68, 3, 80};
+        int nums2 [] = {4, 0, 2};
+
+        try{
+            for(int i = 0; i < nums.length; i++) {
+                try {
+                    System.out.println(nums[i] / nums2[i]);
+                    nums[5] = 5;
+                } catch (ArrayIndexOutOfBoundsException exc) {
+                    System.out.println("Index out of bounds");
+                } catch (ArithmeticException exc) {
+                    System.out.println("Cant divide by zero");
+                }
+            }
+
+        }
+        finally {
+            System.out.println("leaving try");
+        }
+    }
+}
+
 
 9) What does it mean to rethrow an exception?
+To throw an already caught exception to an outer catch.
+
 
 10) What are the 7 methods that come with the Throwable class?
+Throwable fillInStackTrace()
+String getLocalizedMessage()
+String getMessage()
+void printStackTrace()
+void printStackTrace(PrintStream stream)
+void printStackTrace(PrintWriter stream)
+String toString()
 
 11) What does the "finally" block do?
+Specifies a block of code to execute when a try catch block is exited.
+
 
 12) When is the finally block executed? Will it ever not be executed?
+When a try catch block is exited. It will always be executed.
 
 13) What are the three recently added features to Java exceptions?
-
+try-with-resources
+multi-catch
+final rethrow
 
